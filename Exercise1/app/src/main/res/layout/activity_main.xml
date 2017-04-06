@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a1.excercise1.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="240dp"
+            android:id="@+id/RLayout1">
+
+    <HorizontalScrollView
+        android:id="@+id/horScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image01"
+        />
+
+        </ScrollView>
+    </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RLayout1"
+            android:gravity="center">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="위"
+        />
+    <Button
+        android:id="@+id/btn2"
+        android:text="아래"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@id/btn1"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/LLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:id="@+id/horScrollView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:id="@+id/scrollview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/image01"
+                    android:visibility="invisible"
+                    />
+
+            </ScrollView>
+        </HorizontalScrollView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
