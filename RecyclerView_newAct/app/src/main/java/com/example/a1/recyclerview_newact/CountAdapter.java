@@ -1,6 +1,8 @@
 package com.example.a1.recyclerview_newact;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,8 +38,12 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
         myViewHolder.tv.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Toast.makeText(mContext, item, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, sub.class);
+                intent.putExtra("name", text);
+                mContext.startActivity(intent);
+                //finish(); 추가한 뷰들 상태보존하고 어떻게 다른 액티비티 띄우나
             }
         });
 
